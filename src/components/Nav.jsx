@@ -4,10 +4,11 @@ import { useTheme } from '../context/ThemeContext'
 import { THEMES } from '../themes'
 
 const LINKS = [
-  { to: '/',        label: 'Home',     end: true },
-  { to: '/about',   label: 'About' },
-  { to: '/skills',  label: 'Skills' },
-  { to: '/projects',label: 'Projects' },
+  { to: '/', label: 'Home', end: true },
+  { to: '/about', label: 'About' },
+  { to: '/skills', label: 'Skills' },
+  { to: '/projects', label: 'Work' },
+  { to: '/blog', label: 'Blog' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -18,7 +19,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <NavLink to="/" className="nav-logo" onClick={() => setOpen(false)}>
-        faheem<span>.</span>
+        Faheem Ul Islam<span>.</span>
       </NavLink>
 
       <div className={`nav-links${open ? ' open' : ''}`}>
