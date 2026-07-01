@@ -1,60 +1,67 @@
 import Footer from '../components/Footer'
+import { PROFILE } from '../data/profile'
 
 export default function About() {
   return (
     <div className="page">
-      <div className="container">
-        <p className="section-label fade-in">01 // about</p>
-        <h2 className="fade-in-1">About Me</h2>
+      <main className="container">
+        <p className="eyebrow">01 // about</p>
+        <div className="page-heading">
+          <h1>About {PROFILE.shortName}</h1>
+          <p>
+            A full-stack engineer from Lahore, Pakistan, focused on practical delivery, maintainable
+            architecture, and thoughtful use of modern development tools.
+          </p>
+        </div>
 
         <div className="about-grid">
-          <div className="about-text fade-in-2">
+          <section className="about-text card">
             <p>
-              Hi! I'm <strong>Faheem Kamboh</strong>, a full stack developer with deep expertise in
-              <strong> Ruby on Rails</strong> and <strong>pure Ruby</strong>. I love building things
-              that are fast, reliable, and easy to maintain — from RESTful APIs to rich frontend experiences.
+              I am <strong>{PROFILE.fullName}</strong>, a software engineer working across Ruby, Ruby on
+              Rails, Python, React, APIs, databases, testing, and deployment workflows.
             </p>
-            <p style={{ marginTop: '1rem' }}>
-              I've worked across the full stack: designing database schemas, crafting Rails backends,
-              writing RSpec test suites, and building React frontends that connect to those APIs.
-              I care about code quality, good architecture, and shipping products people actually enjoy using.
+            <p>
+              My strongest professional base is Ruby and Rails, but I also work across frontend interfaces,
+              backend integrations, automation, and AI-assisted engineering workflows where they make a real
+              product easier to build or maintain.
             </p>
-            <p style={{ marginTop: '1rem' }}>
-              I'm always exploring — whether that's a new Ruby gem, a design pattern, or a better way
-              to structure a Rails app. I believe great software is built on strong fundamentals,
-              clear thinking, and a healthy obsession with the details.
+            <p>
+              I have contributed to open-source Ruby tooling through professional company-assigned accounts,
+              including standards-focused libraries and mathematical document processing work. I also maintain
+              personal open-source work under my public GitHub account, including <strong>z_ai-ruby</strong>.
             </p>
-            <p style={{ marginTop: '1rem' }}>
-              Currently open to exciting new opportunities. Let's build something great together.
+            <p>
+              I prefer simple systems, clear naming, useful tests, and interfaces that make sense to the people
+              using them. The goal is not just to write code, but to ship software that can be understood,
+              reviewed, improved, and trusted.
             </p>
-          </div>
+          </section>
 
-          <div className="about-sidebar fade-in-3">
+          <aside className="about-sidebar">
             <div className="fact-card">
-              <h3>Quick Facts</h3>
+              <h2>Core focus</h2>
               <ul>
-                <li><span className="arrow">→</span> Full Stack Developer</li>
-                <li><span className="arrow">→</span> Ruby &amp; Rails specialist</li>
-                <li><span className="arrow">→</span> Open to work</li>
-                <li><span className="arrow">→</span> Remote friendly</li>
-                <li><span className="arrow">→</span> Open source contributor</li>
-                <li><span className="arrow">→</span> Lifelong learner</li>
+                <li><span>→</span> Ruby and Ruby on Rails systems</li>
+                <li><span>→</span> Python and API integrations</li>
+                <li><span>→</span> React-based frontend interfaces</li>
+                <li><span>→</span> Open-source Ruby tooling</li>
+                <li><span>→</span> AI-assisted development workflows</li>
               </ul>
             </div>
 
             <div className="fact-card">
-              <h3>Interests</h3>
+              <h2>Working style</h2>
               <ul>
-                <li><span className="arrow">→</span> Clean architecture</li>
-                <li><span className="arrow">→</span> TDD &amp; BDD</li>
-                <li><span className="arrow">→</span> API design</li>
-                <li><span className="arrow">→</span> Performance tuning</li>
-                <li><span className="arrow">→</span> Dev tooling</li>
+                <li><span>→</span> Clear, maintainable code</li>
+                <li><span>→</span> Practical testing and review</li>
+                <li><span>→</span> Production-minded decisions</li>
+                <li><span>→</span> Calm, user-focused interfaces</li>
+                <li><span>→</span> Careful handling of public claims</li>
               </ul>
             </div>
-          </div>
+          </aside>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   )
