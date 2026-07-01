@@ -35,7 +35,7 @@ The repository includes a GitHub Actions workflow that builds the Vite app and d
 The current implementation uses an initials-based placeholder avatar at:
 
 ```text
-public/profile-avatar.svg
+public/avatar.svg
 ```
 
 Replace it with a real profile image when available. If the replacement uses another filename or extension, update `PROFILE.avatar` in:
