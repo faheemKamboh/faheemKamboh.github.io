@@ -16,7 +16,6 @@ export default function Nav() {
   return (
     <nav className="nav" aria-label="Primary navigation">
       <NavLink to="/" className="nav-logo" onClick={() => setOpen(false)}>
-        <span className="logo-mark">FI</span>
         <span className="logo-text">Faheem Ul Islam</span>
       </NavLink>
 

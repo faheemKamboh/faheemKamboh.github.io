@@ -36,7 +36,8 @@ export default function Home() {
 
         <aside className="profile-card" aria-label="Profile summary">
           <div className="avatar-wrap">
-            <img src={PROFILE.avatar} alt="Placeholder avatar for Faheem Ul Islam" className="avatar" />
+            {/* Developer note: replace public/avatar.svg with a real profile photo when available. */}
+            <img src={PROFILE.avatar} alt="Faheem Ul Islam profile avatar" className="avatar" />
           </div>
           <h2>{PROFILE.name}</h2>
           <p>{PROFILE.headline}</p>
@@ -44,9 +45,6 @@ export default function Home() {
             <a href={PROFILE.github} target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-          <p className="avatar-note">
-            Placeholder avatar. Replace <code>public/avatar.svg</code> with a real photo asset when ready.
-          </p>
         </aside>
       </section>
 

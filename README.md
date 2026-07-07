@@ -50,7 +50,7 @@ The site includes:
 
 ## Profile photo
 
-The current implementation uses an initials-based placeholder avatar at:
+The current implementation uses a temporary avatar asset at:
 
 ```text
 public/avatar.svg
@@ -72,4 +72,4 @@ Email: `im@faheemulislam.com`
 
 GitHub: <https://github.com/faheemkamboh>
 
-LinkedIn: <https://linkedin.com/in/faheemkamboh>
+LinkedIn: <https://www.linkedin.com/in/faheem-ul-islam-arshad-b5a748218>

@@ -8,7 +8,7 @@ export const PROFILE = {
   headline: 'Ruby, Rails, Python, React & practical AI-assisted product development',
   avatar: '/avatar.svg',
   github: 'https://github.com/faheemkamboh',
-  linkedin: 'https://linkedin.com/in/faheemkamboh',
+  linkedin: 'https://www.linkedin.com/in/faheem-ul-islam-arshad-b5a748218',
 }
 
 export const METRICS = [
