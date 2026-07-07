@@ -9,17 +9,15 @@ export default function Home() {
     <div className="page home-page">
       <section className="hero-shell">
         <div className="hero-copy">
-          <p className="eyebrow">// full-stack engineer</p>
-          <h1>
-            Building reliable software with Ruby, Rails, Python, React, and practical AI workflows.
-          </h1>
+          <p className="eyebrow">Full-stack software engineer</p>
+          <h1>{PROFILE.name}</h1>
           <p className="hero-name-line">
-            <strong>{PROFILE.name}</strong>
-            <span>{PROFILE.fullName}</span>
+            <span>Ruby on Rails · React · Python · Product engineering</span>
           </p>
           <p className="hero-tagline">
-            I work across backend systems, frontend interfaces, open-source Ruby tooling, and AI-assisted
-            development workflows. The focus is simple: clean systems, clear thinking, and useful products.
+            I build maintainable web applications, internal tools, APIs, and product dashboards from backend
+            architecture to user-facing interfaces. My work combines Rails, React, PostgreSQL, testing,
+            deployment, and practical AI integration where it improves real workflows.
           </p>
 
           <div className="hero-cta">
@@ -39,7 +37,7 @@ export default function Home() {
             {/* Developer note: replace public/avatar.svg with a real profile photo when available. */}
             <img src={PROFILE.avatar} alt="Faheem Ul Islam profile avatar" className="avatar" />
           </div>
-          <h2>{PROFILE.name}</h2>
+          <h2>Engineering focus</h2>
           <p>{PROFILE.headline}</p>
           <div className="profile-links">
             <a href={PROFILE.github} target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -59,7 +57,7 @@ export default function Home() {
 
       <section className="section-block">
         <div className="section-heading">
-          <p className="eyebrow">// selected work</p>
+          <p className="eyebrow">Selected work</p>
           <h2>Public, professional, and product-focused work</h2>
           <p>
             A focused snapshot of open-source contribution, product engineering, and practical full-stack work.
