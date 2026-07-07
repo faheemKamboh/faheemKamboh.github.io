@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { PROFILE, SITE } from '../data/profile'
+import { PROFILE } from '../data/profile'
+import { SITE } from '../data/site'
 
 function ensureMeta(kind, key) {
   const selector = kind === 'property' ? `meta[property="${key}"]` : `meta[name="${key}"]`
