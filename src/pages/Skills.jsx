@@ -1,60 +1,27 @@
 import Footer from '../components/Footer'
-
-const SKILLS = [
-  {
-    category: 'Languages',
-    items: ['Ruby', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'SQL', 'Bash'],
-  },
-  {
-    category: 'Frameworks',
-    items: ['Ruby on Rails', 'React', 'Sinatra', 'RSpec', 'Capybara', 'Minitest'],
-  },
-  {
-    category: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'SQLite', 'Redis', 'ActiveRecord'],
-  },
-  {
-    category: 'APIs & Protocols',
-    items: ['REST', 'JSON', 'GraphQL', 'OAuth2', 'JWT', 'Webhooks'],
-  },
-  {
-    category: 'DevOps & Tools',
-    items: ['Git', 'Docker', 'GitHub Actions', 'Heroku', 'Linux', 'Nginx'],
-  },
-  {
-    category: 'Background Jobs',
-    items: ['Sidekiq', 'Delayed::Job', 'Action Mailer', 'ActiveJob', 'Cron'],
-  },
-  {
-    category: 'Testing',
-    items: ['RSpec', 'Minitest', 'FactoryBot', 'Faker', 'VCR', 'WebMock'],
-  },
-  {
-    category: 'Practices',
-    items: ['TDD', 'BDD', 'MVC', 'OOP', 'SOLID', 'Code Review', 'Agile'],
-  },
-]
+import { SKILL_GROUPS } from '../data/profile'
 
 export default function Skills() {
   return (
     <div className="page">
-      <div className="container">
-        <p className="section-label fade-in">02 // skills</p>
-        <h2 className="fade-in-1">Tech Stack</h2>
+      <main className="container">
+        <p className="eyebrow">02 // skills</p>
+        <div className="page-heading">
+          <h1>Skills and tools</h1>
+          <p>Ruby, Rails, Python, React, testing, deployment, and practical AI-assisted workflows.</p>
+        </div>
 
         <div className="skills-grid">
-          {SKILLS.map(({ category, items }, i) => (
-            <div key={category} className={`card skill-card fade-in-${Math.min(i + 1, 4)}`}>
-              <h3>{category}</h3>
+          {SKILL_GROUPS.map(({ category, items }) => (
+            <article key={category} className="card skill-card">
+              <h2>{category}</h2>
               <div className="skill-tags">
-                {items.map(item => (
-                  <span key={item} className="tag">{item}</span>
-                ))}
+                {items.map(item => <span key={item} className="tag">{item}</span>)}
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   )
