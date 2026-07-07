@@ -10,7 +10,8 @@ The site presents full-stack engineering work across Ruby, Ruby on Rails, Python
 - Vite
 - React Router
 - CSS custom properties
-- GitHub Pages deployment
+- Netlify preview hosting
+- GitHub Pages deployment support
 
 ## Local setup
 
@@ -26,9 +27,26 @@ npm run build
 npm run preview
 ```
 
-## Deployment
+## Netlify preview
 
-The repository includes a GitHub Actions workflow that builds the Vite app and deploys the generated `dist` directory to GitHub Pages when changes are pushed to `main`.
+The preview domain is:
+
+```text
+https://faheemulislam.netlify.app
+```
+
+The project includes `netlify.toml` so clean client-side routes such as `/blog/what-is-ai-in-simple-words` can load correctly on refresh.
+
+## SEO assets
+
+The site includes:
+
+- page metadata in `index.html`
+- runtime metadata helper in `src/components/Seo.jsx`
+- `public/robots.txt`
+- `public/sitemap.xml`
+- clean blog article URLs
+- structured data for the homepage and article pages
 
 ## Profile photo
 
