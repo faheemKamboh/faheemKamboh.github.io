@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import { useTheme } from '../context/ThemeContext'
-import { THEMES } from '../themes'
 
 const LINKS = [
   { to: '/', label: 'Home', end: true },
@@ -13,16 +11,16 @@ const LINKS = [
 ]
 
 export default function Nav() {
-  const { theme, setTheme } = useTheme()
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="nav">
+    <nav className="nav" aria-label="Primary navigation">
       <NavLink to="/" className="nav-logo" onClick={() => setOpen(false)}>
-        Faheem Ul Islam<span>.</span>
+        <span className="logo-mark">FI</span>
+        <span className="logo-text">Faheem Ul Islam</span>
       </NavLink>
 
-      <div className={`nav-links${open ? ' open' : ''}`}>
+      <div className={`nav-links${open ? ' open' : ''}`} id="primary-navigation">
         {LINKS.map(({ to, label, end }) => (
           <NavLink
             key={to}
@@ -36,23 +34,18 @@ export default function Nav() {
         ))}
       </div>
 
-      <div className="nav-right">
-        <div className="theme-dots">
-          {Object.entries(THEMES).map(([key, t]) => (
-            <button
-              key={key}
-              className={`theme-dot${theme === key ? ' active' : ''}`}
-              style={{ background: t.dot }}
-              title={t.label}
-              onClick={() => setTheme(key)}
-              aria-label={`Switch to ${t.label} theme`}
-            />
-          ))}
-        </div>
-        <button className="burger" onClick={() => setOpen(o => !o)} aria-label="Toggle menu">
-          <span /><span /><span />
-        </button>
-      </div>
+      <button
+        className="burger"
+        onClick={() => setOpen(value => !value)}
+        aria-label="Toggle navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded={open}
+        type="button"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
     </nav>
   )
 }
